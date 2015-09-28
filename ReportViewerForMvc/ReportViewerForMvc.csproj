@@ -76,10 +76,23 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="Telerik.ReportViewer.WebForms, Version=7.2.14.127, Culture=neutral, PublicKeyToken=a9d7983dfcc261be, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CopyPropertiesHelper.cs" />
     <Compile Include="IframeBuilder.cs" />
+    <Compile Include="TelerikReportViewerWebForm.aspx.cs">
+      <DependentUpon>TelerikReportViewerWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="TelerikReportViewerWebForm.aspx.designer.cs">
+      <DependentUpon>TelerikReportViewerWebForm.aspx.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="TelerikReportViewerExtensions.cs" />
+    <Compile Include="TelerikReportViewerHelpers.cs" />
+    <Compile Include="TelerikReportViewerForMvc.cs" />
     <Compile Include="ReportViewerForMvc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportDataSourceCollectionExtensions.cs" />
@@ -105,6 +118,10 @@
     <EmbeddedResource Include="Scripts\ReceiveMessage.js" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="TelerikReportViewerWebForm.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ReportViewerWebForm.aspx">
       <SubType>ASPXCodeBehind</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
