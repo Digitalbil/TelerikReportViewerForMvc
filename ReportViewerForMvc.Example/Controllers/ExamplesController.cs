@@ -54,6 +54,13 @@ namespace ReportViewerForMvc.Example.Controllers
             return View();
         }
 
+        public ActionResult LocalTelerikReportExample()
+        {
+            var reportViewer = new Telerik.ReportViewer.WebForms.ReportViewer();
+            ViewBag.ReportViewer = reportViewer;
+            return View();
+        }
+
         private void SetLocalReport()
         {
             ReportViewer reportViewer = new ReportViewer();
